@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    /* Color Theme */
+    --primary-color: #50d22e;
+    --secondary-color: white;
+    --tertiary-color: #0e4201;
+    --quaternary-color: #2cb20a;
+    --neutral-color: #080808;
+
+    /* Border */
+    --border-size: 1.5px;
+
+    /* Media Query */
+    /* Unfortunately, these variables do not work due to the lack of support. Use them as reference */
+    --tablet: 700px;
+    --desktop: 1150px;
+
+    /* Animation */
+    /* The duration/speed of the text-cursor animation*/
+    --text-cursor-size: 0.6em;
+    --text-cursor-duration: 0.75s;
+
+    /* Text */
+    --font-size: 2rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Gemunu Libre', sans-serif;
+}
+
+/* Change Highligh colors */
+::selection {
+    color: var(--neutral-color);
+    background: var(--primary-color);
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+body{
+    /* background-color: var(--neutral-color); */
+    background-color: #080808;
+    background-image:  linear-gradient(rgb(80, 210, 46, 5%) 3.2px, transparent 3.2px), linear-gradient(to right, rgb(80, 210, 46, 5%) 3.2px, #080808 3.2px);
+    background-size: 64px 64px;
+    overflow: hidden;
+}

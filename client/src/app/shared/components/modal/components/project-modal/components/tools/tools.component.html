@@ -1,0 +1,14 @@
+<div class="tools-container">
+    <h2>Tools</h2>
+    <div class="icons-container" @upwardsRevealStagger>
+        @for(tool of toolsList; track $index){
+            @if(projectTools.includes(tool.name)){
+                <div class="icon-wrapper grow" (mouseenter)="toggleHover($index)" (mouseleave)="toggleHover($index)">
+                    <img src="{{tool.src}}" alt="{{tool.alt}}"/>
+                    <h5>{{tool.name}}</h5>
+                    @if(isHovering && $index === hoverIndex){<p class="tool-description">{{tool.description}}</p>}
+                </div>
+            }
+        }
+    </div>
+</div>

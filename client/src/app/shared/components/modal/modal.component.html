@@ -1,0 +1,13 @@
+@if(modalService.getIsModalOpen()){
+    <div #modalRef class="modal-container" (click)="clickOutside($event)">
+        <span class="material-symbols-outlined close-modal-button" (click)="modalService.closeModal()">close</span>
+        @switch (this.modalService.getType()) {
+            @case(modalEnums.Project){
+                <app-project-modal [modalData]="modalService.getData()"/>
+            }
+            @default {
+                <div>Empty Modal</div>
+            }
+        }
+    </div>
+}

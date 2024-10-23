@@ -1,0 +1,158 @@
+/* Animation */
+.text-cursor{
+    animation: expand calc(var(--text-cursor-duration) * 2) ease-out calc(var(--text-cursor-duration) * 0.75) forwards, 
+    blinking-text-cursor calc(var(--text-cursor-duration) * 1.25) ease-out
+    calc(var(--text-cursor-duration) * 0.75) 2 normal forwards,
+    infinite normal forwards;
+    overflow: hidden;
+}
+
+.blink-animation{
+    animation: blink 1.5s linear 1 normal forwards;
+    overflow: hidden;
+}
+
+.grow{
+    position: relative;
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        background-color: var(--neutral-color);
+        height: 100%;
+        width: 100%;
+        animation: grow 1s linear 1 normal forwards;
+    }
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
+        height: var(--text-cursor-size);
+        background-color: var(--primary-color);
+        box-shadow: 0 0 20px 1px var(--primary-color);
+        animation:  glowing-bottom-border 1s linear 1 normal forwards;
+    }
+}
+
+.expand-glowing{
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--neutral-color);
+        height: 100%;
+        animation: expand-right 0.5s ease-in-out 1 normal forwards;
+    }
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        width: 5%;
+        height: 100%;
+        background-color: var(--primary-color);
+        box-shadow: 0 0 20px 1px var(--primary-color);
+        animation:  glowing-right-border 0.5s ease-in-out 1 normal forwards;
+    }
+}
+
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+/* Keyframes */
+
+@keyframes blinking-text-cursor {
+    0%{
+        border-right: calc(var(--border-size) * 5) transparent
+    }
+    25%{
+        border-right: calc(var(--border-size) * 5) solid var(--primary-color);
+    }
+    50%{
+        border-right: calc(var(--border-size) * 5) transparent
+    }
+    75%{
+        border-right: calc(var(--border-size) * 5) solid var(--primary-color);
+    }
+    100%{
+        border-right: calc(var(--border-size) * 5) transparent
+    }
+}
+
+@keyframes blink {
+    0%{
+        opacity: 50%;
+    }
+    25%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    75%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes expand {
+    from{
+        width: 0%;
+    }
+    to{
+        width:100%;
+    }
+}
+
+@keyframes grow {
+    from{
+        height: 100%;
+    }
+    to{
+        height: 0;
+    }
+}
+
+@keyframes glowing-bottom-border {
+    80%{
+        opacity: 1;
+    }
+    100% {
+        bottom: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes expand-right{
+    from{
+        width: 100%;
+
+    }
+    to{
+        width: 0%;
+    }
+}
+
+@keyframes glowing-right-border {
+    0%{
+        left: 0%;
+    }
+    80%{
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}

@@ -1,0 +1,35 @@
+.contact-container{
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    column-gap: 2em;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    & h1, h3{
+        width: 0%;
+    }
+    & h1{
+        font-size: calc(var(--font-size) * 1.5);
+        margin-bottom: 0.25em;
+        text-wrap: nowrap;
+    }
+    & h3, a{
+        color: var(--quaternary-color);
+        margin-bottom: 1.5em;
+        text-wrap: nowrap;
+    }
+}
+
+.contact-header{
+    width: 465px;
+}
+
+.form-container{
+    position: relative;
+}

@@ -1,0 +1,22 @@
+<div class="project-modal-container">
+    <div class="images-container">
+        <app-carousel [images]="this.modalData.images"/>
+    </div>
+    <div class="info-container">
+        <div class="description-container">
+            <h1>{{this.modalData.title}}</h1>
+            <p>{{this.modalData.description}}</p>
+            <ul>
+                <li>            
+                    <i class="fa description-icon">&#xf09b;</i>
+                    <a href="{{this.modalData.github}}" target="_blank">{{this.modalData.github}}</a>
+                </li>
+                <li>
+                    <i class="material-symbols-outlined description-icon">arrow_outward</i>
+                    <a href="{{this.modalData.link}}" target="_blank">{{this.modalData.link}}</a>
+                </li>
+            </ul>
+        </div>
+        <app-tools [projectTools]="this.modalData.tools"/>
+    </div>
+</div>

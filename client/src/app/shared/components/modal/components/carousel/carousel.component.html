@@ -1,0 +1,22 @@
+<div class="carousel-container" (keydown)="onKeyDown($event)">
+
+    <span class="material-symbols-outlined arrow left-arrow" (click)="changeIndex(-1)">
+        arrow_back_ios
+    </span>
+
+    <div class="carousel-image-container" #carouselImageContainer>
+        @for(image of images; track $index){
+            <img src={{image.src}} alt={{image.alt}} [class]="this.index === $index ? 'slide' : 'slide-hide'"/>
+        }
+    </div>
+
+    <span class="material-symbols-outlined arrow right-arrow" (click)="changeIndex(1)">
+        arrow_forward_ios
+    </span>
+    
+    <div class="indicator-wrapper">
+        @for(image of images; track $index){
+            <span [class]="'indicator ' + (this.index === $index ? 'active-indicator' : '')" (click)="changeIndex($index)"></span>
+        }
+    </div>
+</div>

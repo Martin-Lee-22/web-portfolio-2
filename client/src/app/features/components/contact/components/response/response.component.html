@@ -1,0 +1,10 @@
+<div class="response-container expand-glowing" (click)="contactService.setIsSubmitted(false)">
+    @if(contactService.getIsSuccess()){
+        <span class="material-symbols-outlined response-symbol">task_alt</span>
+        <h3>Successfully Sent!</h3>
+    } @else {
+        <span class="material-symbols-outlined response-symbol fail">cancel</span>
+        <h3 class="fail">Something went wrong! please try again</h3>
+        <span class="material-symbols-outlined back-symbol">arrow_back_ios</span>
+    }
+</div>

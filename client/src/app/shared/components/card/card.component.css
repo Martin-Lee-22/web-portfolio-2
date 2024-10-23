@@ -1,0 +1,60 @@
+.card-container{
+    position: relative;
+    border: 0.5px solid var(--primary-color);
+    padding: 1.25em;
+    display: flex;
+    column-gap: 1em;
+    width: 400px;
+    height: 150px;
+    & h2{
+        position: absolute;
+        top: -1.25em;
+        left: 0em;
+        color: var(--primary-color);
+    }
+    & p{
+        color: var(--quaternary-color);
+    }
+    & span{
+        color: var(--quaternary-color);
+        font-weight: 100;
+    }
+    & img{
+        border-radius: 3px;
+        width: 100px;
+        height: 100px;
+    }
+    &:hover{
+        cursor: pointer;
+        box-shadow: 0 0 3px 2px var(--primary-color);
+        background-color: rgb(0, 40, 0);
+        & img{
+            box-shadow: 0 0 3px 2px var(--primary-color);
+        }
+    }
+}
+
+.card-description-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-footer{
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    & .calendar-container{
+        float: left;
+        display: flex;
+        align-items: center;
+        column-gap: 0.3em;
+    }
+    & .show-project{
+        margin-top: auto;
+        margin-bottom: auto;
+        color: var(--primary-color);
+        font-weight: 500;
+    }
+}

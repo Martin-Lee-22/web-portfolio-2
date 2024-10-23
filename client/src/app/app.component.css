@@ -1,0 +1,23 @@
+.main{
+    border: var(--border-size) solid var(--primary-color);
+    width: 85vw;
+    height: 75vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    box-shadow: 0 0 5px 2px var(--primary-color);
+    background-color: var(--neutral-color);
+    display: flex;
+    flex-direction: row;
+}
+
+.features-container{
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-color: var(--primary-color) var(--neutral-color);
+    scrollbar-width: thin;
+    padding: 1em 2em;
+    position: relative;
+}

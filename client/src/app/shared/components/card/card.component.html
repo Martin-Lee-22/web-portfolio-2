@@ -1,0 +1,16 @@
+<div class="card-container" (mouseenter)="isMouseEntered = true" (mouseleave)="isMouseEntered = false" appClick (click)="modalService.openModal(data)">
+    <h2>{{data.title | truncate: 50}}</h2>
+    <img ngSrc={{data.images[0].src}} width="100" height="100" alt={{data.images[0].alt}} />
+    <div class="card-description-container">
+        <p>{{data.description | truncate: 160}}</p>
+        <div class="card-footer">
+            <div class="calendar-container">
+                <span class="material-symbols-outlined">
+                    calendar_month
+                </span>
+                <span class="card-year">{{data.date}}</span>
+            </div>
+            @if(isMouseEntered){<span class="show-project">Show Project</span>}
+        </div>
+    </div>
+</div>

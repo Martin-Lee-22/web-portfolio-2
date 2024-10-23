@@ -1,0 +1,5 @@
+<article class="projects-container" @pageTransition>
+    @for (project of projects; track $index) {
+        <app-card [data]="project"/>
+    }
+</article>

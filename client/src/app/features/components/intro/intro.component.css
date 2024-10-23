@@ -1,0 +1,134 @@
+/* Variables */
+@property --gradient-angle{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 180deg;
+}
+
+@property --transparent-start-angle{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@property --transparent-end-angle{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@property --radar-start-angle{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@property --radar-end-angle{
+    syntax: '<angle>';
+    inherits: false;
+    /* initial-value: 8deg; <---- Uncomment this if you no longer use expand-radar keyframe */
+    initial-value: 0deg;
+}
+
+@property --bg-start-angle{
+    syntax: '<angle>';
+    inherits: false;
+    /* initial-value: 8deg; <---- Uncomment this if you no longer use expand-radar keyframe */
+    initial-value: 0deg;
+}
+
+@property --bg-end-angle{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 360deg;
+}
+
+
+/* Classes */
+.intro-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before{
+        content: '';
+        display: block;
+        width: calc(100% + calc(var(--border-size) * 12));
+        height: calc(100% + calc(var(--border-size) * 12));
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: var(--neutral-color);
+    }
+}
+
+.intro-button-wrapper{
+    box-shadow: 0 0 3px 1px var(--primary-color);
+}
+
+/* Animation */
+:host{
+    --duration: 0.5s
+}
+
+.intro-container-animation{
+    &::before{
+        background: conic-gradient(from var(--gradient-angle),  transparent var(--transparent-start-angle) var(--transparent-end-angle),  var(--primary-color) var(--radar-start-angle) var(--radar-end-angle), var(--neutral-color) var(--bg-start-angle) var(--bg-end-angle));
+        animation:  expand-radar var(--duration) ease-in calc(var(--duration) * 0.9) 1 normal forwards,
+                    rotate calc(var(--duration) * 2) ease-in-out calc(var(--duration) * 2) 1 normal forwards;
+    }
+}
+
+.intro-button-animation{
+    animation: shrink var(--duration) ease-out 1 normal forwards, delete 0.5s ease calc(var(--duration) * 4.25) forwards;
+    & > *{
+        display: none;
+    }
+}
+
+/* keyframes */
+
+@keyframes expand-radar{
+    to{
+        --radar-end-angle: 6deg;
+        --bg-start-angle: 6deg;
+    }
+}
+
+@keyframes rotate{
+    65%{
+        --transparent-end-angle: 355deg;
+        --radar-start-angle: 355deg;
+        --radar-end-angle: 360deg;
+    }
+    100% {
+        --transparent-end-angle: 360deg;
+        --radar-start-angle: 360deg;
+        --radar-end-angle: 360deg;
+    }
+}
+
+@keyframes shrink {
+    from{
+        border-radius: 0;
+        width: 73px;
+        height: 38px;
+    }
+    to{
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        background-color: var(--primary-color);
+    }
+}
+
+@keyframes delete {
+    to{
+        width: 0px;
+        height: 0px;
+        display:none;
+    }
+}

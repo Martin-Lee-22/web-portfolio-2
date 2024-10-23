@@ -1,0 +1,5 @@
+<div [className]="'intro-container ' + (isAnimating ? 'intro-container-animation' : '')">
+    <div [className]="'intro-button-wrapper ' + (isAnimating ? 'intro-button-animation' : '')">
+        <app-button (click)="startIntro()">Enter</app-button>
+    </div>
+</div>

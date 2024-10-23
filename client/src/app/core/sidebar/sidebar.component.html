@@ -1,0 +1,15 @@
+<div class="navbar-container">
+    <nav class="navbar">
+        <i class="material-symbols-outlined">code</i>
+        <h6>01101110 01100001 01110110 01100010 01100001 01110010</h6>
+        <hr/>
+        <ul>
+        @for(link of links; track $index){
+            <li [hoverSound]="hoverSound" (click)="updatePageIndex($index)" [class]="'text-cursor ' + ($index === pageIndex ? 'li-active' : '')">
+                <a href="#{{link}}">{{link | titlecase}}</a>
+            </li>
+        }
+        </ul>
+    </nav>
+</div>
+
