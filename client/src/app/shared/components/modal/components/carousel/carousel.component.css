@@ -35,10 +35,6 @@
     }
 }
 
-.slide-hide{
-    /* display: none; */
-}
-
 .left-arrow{
     left: 7%;
 }
@@ -80,4 +76,48 @@
     'wght' 400,
     'GRAD' 0,
     'opsz' 24
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 700px) {
+    .carousel-container{
+        align-items: center;
+    }
+    .carousel-image-container{
+        height: 75%;
+        width: 90%;
+        max-width: 240px;
+    }
+    .left-arrow{
+        left: -9%;
+    }
+    .right-arrow{
+        right: -11%;
+    }
+    .indicator{
+        width:0.3rem;
+        height: 0.3rem;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1150px) {
+    .carousel-container{
+        align-items: center;
+    }
+    .carousel-image-container{
+        height: 75%;
+        width: 90%;
+        max-width: 360px;
+    }
+    .left-arrow{
+        left: -3%;
+    }
+    .right-arrow{
+        right: -5%;
+    }
+    .indicator{
+        width:0.4rem;
+        height: 0.4rem;
+    }
 }

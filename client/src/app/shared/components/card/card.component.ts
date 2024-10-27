@@ -10,7 +10,7 @@ import { NgOptimizedImage } from '@angular/common';
   standalone: true,
   imports: [TruncatePipe, ClickDirective, NgOptimizedImage],
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  styleUrls: ['./card.component.css', '../../../animations.css']
 })
 export class CardComponent {
   @Input() data: Project = {} as Project

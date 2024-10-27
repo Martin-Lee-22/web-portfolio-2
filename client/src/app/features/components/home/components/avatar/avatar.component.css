@@ -1,0 +1,132 @@
+.avatar{
+    width: 20rem;
+}
+
+.eye{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary-color);
+}
+
+.left-eye-wrapper{
+    position: absolute;
+    width: 13px;
+    height: 6px;
+    top: 46%;
+    left: 36%;
+    transform-origin: 100% 100%;
+}
+
+.right-eye-wrapper{
+    position: absolute;
+    width: 13px;
+    height: 6px;
+    top: 46%;
+    left: 56%;
+    transform-origin: 100% 100%;
+}
+
+.eyelids{
+    position: absolute;
+    top: 43%;
+    border-radius: 50%;
+    width: 10%;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+.left-eyelid{
+    left: 35%;
+}
+
+.right-eyelid{
+    left: 55.5%;
+}
+
+.blink{
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        background-color: var(--primary-color);
+        animation: blink 0.75s ease-in-out 0s 1 normal;
+    }
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        animation: blink 0.75s ease-in-out 0s 1 normal;
+    }
+}
+
+.shake-head{
+    animation: shake-head 0.65s linear 0s 1 normal;
+}
+
+.lower-head{
+    animation: lower-head 1s ease-in-out 0s 1 normal;
+}
+
+.angry-eyes{
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        background-color: var(--primary-color);
+        animation: tired-eyes 0.75s linear 0s 1 normal;
+    }
+}
+
+@keyframes blink {
+    0%{
+        height: 50%;
+    }
+    25%{
+        height: 0%;
+    }
+    75%{
+        height: 50%;
+    }
+}
+
+@keyframes tired-eyes {
+    85%{
+        height: 50%;
+    }
+    100%{
+        height: 0%;
+    }
+}
+
+@keyframes shake-head {
+    20%{
+        transform: rotate(-10deg);
+    }
+    40%{
+        transform: rotate(10deg);
+    }
+    60%{
+        transform: rotate(-10deg);
+    }
+    80%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes lower-head {
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}

@@ -22,6 +22,11 @@
 
     /* Text */
     --font-size: 2rem;
+
+    /* Media Queries: Won't work. Use them as reference */
+    --mobile: 700px;
+    --tablet: 701px;
+    --computer: 1150px;
 }
 
 /* Box sizing rules */

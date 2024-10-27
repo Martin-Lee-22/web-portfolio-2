@@ -38,3 +38,10 @@
     'GRAD' 0,
     'opsz' 40
 }
+
+@media screen and (max-width: 500px) {
+    .response-container{
+        width: 105%;
+        left: -3px;
+    }
+}

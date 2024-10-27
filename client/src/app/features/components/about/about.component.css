@@ -35,9 +35,32 @@
     flex-direction: column;
     height: fit-content;
     & img{
-        width: 15rem;
+        width: 13rem;
     }
     & p{
         color: var(--primary-color);
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .about-container{
+        flex-direction: column;
+        overflow-y: scroll;
+        row-gap: 0.5em;
+        padding: 1.5em 0 1.5em 0;
+    }
+    .about-description-container{
+        width: 80%;
+        & h1{
+            font-size: calc(var(--font-size) * 1);
+        }
+        & p{
+            font-size: calc(var(--font-size) * 0.6);
+        }
+    }
+    .about-qrcode-container{
+        & img{
+            width: 10rem;
+        }
     }
 }

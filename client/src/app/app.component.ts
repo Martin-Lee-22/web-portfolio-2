@@ -17,5 +17,5 @@ import { ContactComponent } from "./features/components/contact/contact.componen
 })
 export class AppComponent {
   isIntroActive: boolean = true
-  pageIndex: number = 3
+  pageIndex: number = 0
 }

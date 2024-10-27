@@ -42,10 +42,10 @@
         content: '';
         display: block;
         position: absolute;
-        top: 0;
+        top: -1px;
         right: 0;
         background-color: var(--neutral-color);
-        height: 100%;
+        height: calc(100% + 3px);
         animation: expand-right 0.5s ease-in-out 1 normal forwards;
     }
     &::before{
