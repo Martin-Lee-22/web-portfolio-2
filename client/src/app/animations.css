@@ -18,6 +18,7 @@
         content: '';
         display: block;
         position: absolute;
+        z-index: 1;
         top: 0;
         background-color: var(--neutral-color);
         height: 100%;
@@ -28,6 +29,7 @@
         content: '';
         display: block;
         position: absolute;
+        z-index: 2;
         bottom: 0%;
         width: 100%;
         height: var(--text-cursor-size);

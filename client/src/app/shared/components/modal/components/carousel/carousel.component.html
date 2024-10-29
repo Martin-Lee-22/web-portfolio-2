@@ -6,7 +6,7 @@
 
     <div class="carousel-image-container" #carouselImageContainer>
         @for(image of images; track $index){
-            <img src={{image.src}} alt={{image.alt}} [class]="this.index === $index ? 'slide' : 'slide-hide'"/>
+            <img src={{image.src}} alt={{image.alt}} class="slide"/>
         }
     </div>
 

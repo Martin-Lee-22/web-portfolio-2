@@ -1,9 +1,30 @@
+.avatar-container{
+    position: relative;
+}
+
+.easter-egg{
+    &::after{
+        content:"";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 32%;
+        width: 125px;
+        aspect-ratio: 1;
+        background-image: url("../../../../../../../public/images/easter_egg.png");
+        background-size: cover;
+        opacity: 0;
+        animation: reveal-easter-egg 0.75s ease-in-out 0s 1 normal forwards;
+    }
+}
+
 .avatar{
     width: 20rem;
 }
 
 .eye{
     position: absolute;
+    z-index: -2;
     width: 6px;
     height: 6px;
     background-color: var(--primary-color);
@@ -69,7 +90,7 @@
 }
 
 .lower-head{
-    animation: lower-head 1s ease-in-out 0s 1 normal;
+    animation: lower-head 0.75s ease-in-out 0s 1 normal;
 }
 
 .angry-eyes{
@@ -128,5 +149,49 @@
     }
     100%{
         transform: translateY(0px);
+    }
+}
+
+@keyframes reveal-easter-egg {
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        top: 100%;
+    }
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 700px) {
+    .avatar{
+        width: 14em;
+    }
+    .avatar-container{
+        position: relative;
+        margin-top: -125px;
+    }
+
+    .easter-egg{
+        &::after{
+            left: 25%;
+        }
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1150px) {
+    .avatar{
+        width: 15em;
+    }
+    .avatar-container{
+        position: relative;
+        margin-top: -100px;
+    }
+
+    .easter-egg{
+        &::after{
+            left: 25%;
+        }
     }
 }

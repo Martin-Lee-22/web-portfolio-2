@@ -8,7 +8,7 @@
 .carousel-image-container{
     display: flex;
     overflow: scroll;
-    width: 65%;
+    width: 61.5%;
     box-shadow: 0 0 15px 1px var(--primary-color);
     scroll-behavior: smooth;
 
@@ -90,10 +90,15 @@
         max-width: 240px;
     }
     .left-arrow{
-        left: -9%;
+        left: -1%;
+        background-color: rgb(8, 8, 8, 50%);
+        border-radius: 50%;
     }
     .right-arrow{
-        right: -11%;
+        right: -2%;
+        background-color: rgb(8, 8, 8, 50%);
+        display: block;
+        border-radius: 50%;
     }
     .indicator{
         width:0.3rem;
@@ -107,14 +112,14 @@
     }
     .carousel-image-container{
         height: 75%;
-        width: 90%;
-        max-width: 360px;
+        width: 70%;
+        /* max-width: 360px; */
     }
     .left-arrow{
-        left: -3%;
+        left: 3%;
     }
     .right-arrow{
-        right: -5%;
+        right: 2%;
     }
     .indicator{
         width:0.4rem;

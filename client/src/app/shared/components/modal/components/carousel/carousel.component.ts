@@ -48,7 +48,6 @@ export class CarouselComponent {
 
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
-      console.log(event);
       this.onKeyDown(event)
   }
 }

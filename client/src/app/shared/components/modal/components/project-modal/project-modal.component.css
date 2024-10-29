@@ -123,6 +123,7 @@
     .info-container{
         flex-direction: column;
         height: 100%;
+        overflow-y: scroll;
     }
     .description-container{
         height: min-content;
@@ -132,7 +133,7 @@
             font-size: calc(var(--font-size) * 0.6)
         }
         & p{
-            font-size: calc(var(--font-size) * 0.4);
+            font-size: calc(var(--font-size) * 0.6);
         }
         & ul{
             & li{

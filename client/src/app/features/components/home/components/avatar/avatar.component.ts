@@ -17,15 +17,18 @@ export class AvatarComponent implements AfterViewInit{
   maxCount: number = 3
   eyelidElements: Element[] = []
 
+  // The size of the avatar
   size = {} as DOMRect
   sizeX = 0
   sizeY = 0
 
   ngAfterViewInit(): void {
+    // Code below is used to get the size of the avatar
     this.size = this.anchor.nativeElement.getBoundingClientRect();
     this.sizeX = this.size.left + this.size.width / 2
     this.sizeY = this.size.top + this.size.height / 2
 
+    // Code below is used to get the eyelid elements of the avatar
     const elements = this.avatarContainer.nativeElement.getElementsByClassName('eyelids');
     this.eyelidElements = Array.from(elements);
   }
@@ -34,6 +37,13 @@ export class AvatarComponent implements AfterViewInit{
     if(this.count <= this.maxCount) this.count += 1
   }
 
+  /**
+   * Animates the avatar based on the amount of times the user has clicked on it.
+   * The animation depends on the value of the count property.
+   * If the value is 1, the avatar blinks its eyes.
+   * If the value is 2, the avatar shakes its head.
+   * If the value is 3, the avatar lowers its head and drops the easter egg.
+   */
   countAnimation():void{
     switch(this.count){
       case 1:
@@ -47,10 +57,7 @@ export class AvatarComponent implements AfterViewInit{
         break
 
       case 3:
-        this.avatarContainer.nativeElement.classList.add('lower-head')
-        this.eyelidElements.forEach((element) => {
-          element.classList.add('angry-eyes')
-        })
+        this.avatarContainer.nativeElement.classList.add('lower-head', 'easter-egg')
         break
       default:
         break;
