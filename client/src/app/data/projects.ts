@@ -1,5 +1,37 @@
 export const projects = [
     {
+        "title": "Web Portfolio v2.0",
+        "date": "2024",
+        "role": "Lead Developer",
+        "description": "Version 2.0 of my Web Portfolio that showcases my skills/experience, personal projects, and provide a means of communication.",
+        "images": [
+                    {
+                        "src" :"/images/projects/project_4/1.png", 
+                        "alt": "Homepage"
+                    }, 
+                    {
+                        "src": "/images/projects/project_4/2.png", 
+                        "alt": "Projects Page"
+                    }, 
+                    {
+                        "src": "/images/projects/project_4/3.png", 
+                        "alt": "Example of Modal showing a project"
+                    }, 
+                    {
+                        "src": "/images/projects/project_4/4.png", 
+                        "alt": "About Page"
+                    }, 
+                    {
+                        "src": "/images/projects/project_4/5.png", 
+                        "alt": "Contact Page"
+                    }
+                ],
+        "tools":['angular', 'typescript', 'javascript'],
+        "link": "",
+        "github": "https://github.com/Martin-Lee-22/web-portfolio-2",
+        "inProgress": false
+    },
+    {
         "title": "easycolorui",
         "date": "2024",
         "role": "Lead Developer",
