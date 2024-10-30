@@ -27,7 +27,7 @@ export const tools = [
         name: 'framer',
         src: 'images/tools/framer.png',
         alt: 'framer',
-        description: 'powerful motion library for React',
+        description: 'Powerful motion library for React',
     },
     {
         name: 'github',

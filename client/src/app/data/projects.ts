@@ -3,7 +3,7 @@ export const projects = [
         "title": "easycolorui",
         "date": "2024",
         "role": "Lead Developer",
-        "description": "A UI/UX web application that allows users to effortlessly create their own color palettes and test them on HTML element in real time.",
+        "description": "A UI/UX web application that allows users to effortlessly create their own color palettes and test them on pre-made HTML elements in real time.",
         "images": [
                     {
                         "src" :"/images/projects/project_3/1.png", 
@@ -23,7 +23,7 @@ export const projects = [
         "title": "Medical Clinic",
         "date": "2024",
         "role": "Lead Developer",
-        "description": "A personal 'MERN' web application designed for medical office assistants to streamline administrative tasks. It allows users to create and manage profiles for patients, doctors, and clinic facilities. This application enables office staff to schedule and track patient appointments to minimize scheduling conflicts.",
+        "description": "A personal 'MERN' web application designed for medical office assistants to streamline administrative tasks. It allows users to create and manage profiles for patients, doctors, and clinic facilities. This application enables office staff to schedule and track patient appointments to minimize scheduling conflicts. Feel free to to create an account to try it out!",
         "images": [
                     {
                         "src" :"/images/projects/project_2/1.png", 
@@ -68,7 +68,7 @@ export const projects = [
         "inProgress": false
     },
     {
-        "title": "Web Portfolio",
+        "title": "Web Portfolio v1.0",
         "date": "2022",
         "role": "Lead Developer",
         "description": "A responsive static website that showcase my skills/experience and provide a means of communication.",

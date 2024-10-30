@@ -48,11 +48,3 @@ body, h1, h2, h3, h4, p,
 figure, blockquote, dl, dd {
     margin: 0;
 }
-
-body{
-    /* background-color: var(--neutral-color); */
-    background-color: #080808;
-    background-image:  linear-gradient(rgb(80, 210, 46, 5%) 3.2px, transparent 3.2px), linear-gradient(to right, rgb(80, 210, 46, 5%) 3.2px, #080808 3.2px);
-    background-size: 64px 64px;
-    overflow: hidden;
-}

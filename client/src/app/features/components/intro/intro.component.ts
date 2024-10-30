@@ -26,13 +26,13 @@ export class IntroComponent {
     this.isAnimating = true
 
     // delays the radar sound effect for the animation
-    let radarDelay = 610
+    let radarDelay = 630
     setTimeout(() => {
       this.soundService.playSound(this.animationSound, 0.25);
     }, radarDelay)
 
-    
-    let delay = 3000;
+    // delays the end of the animation before showing the webpage content.
+    let delay = 2500;
     setTimeout(() => {
       this.isIntroActive = !this.isIntroActive;
       this.isIntroActiveChange.emit(this.isIntroActive);

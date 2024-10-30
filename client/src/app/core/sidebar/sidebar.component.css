@@ -71,18 +71,6 @@
             color: var(--tertiary-color);
         }
     }
-
-    &::before{
-        content: '';
-        display: block;
-        position: absolute;
-        right: calc(var(--text-cursor-size) * -1);
-        height: 100%;
-        width: var(--text-cursor-size);
-        background-color: var(--primary-color);
-        box-shadow: 0 0 20px 1px var(--primary-color);
-        animation:  glowing-right-border calc(var(--text-cursor-duration) * 1.3) linear 1 normal forwards;
-    }
 }
 
 

@@ -20,7 +20,6 @@ export class SoundService {
    * @param volume - A number between 0 and 1 representing the volume of the sound.
    */
   playSound(src: string, volume: number){
-    console.log(`volume: ${volume}`)
       if(!this.isMuted){
         let audio = new Audio();
         audio.volume = volume;

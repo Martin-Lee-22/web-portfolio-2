@@ -26,6 +26,18 @@
         font-size: calc(var(--font-size) * 0.7);
         margin-bottom: 1em;
     }
+    & a{
+        &:visited{
+            text-decoration: none;
+            color: var(--quaternary-color);
+        }
+        &:focus{
+            outline: none;
+        }
+        &:hover{
+            text-decoration: underline;
+        }
+    }
 }
 
 .about-qrcode-container{

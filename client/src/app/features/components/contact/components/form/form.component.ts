@@ -1,14 +1,14 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
-import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
-import { ContactService } from '../../contact.service';
+import emailjs from '@emailjs/browser';
+import { ContactService } from '../../contact.service';import { ClickDirective } from '../../../../../shared/directives/sounds/click/click.directive';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, ClickDirective],
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css'],
+  styleUrls: ['./form.component.css']
 })
 export class FormComponent {
   contactService: ContactService = inject(ContactService)
@@ -18,18 +18,16 @@ export class FormComponent {
     email: new FormControl('', [Validators.required, Validators.email]),
     message: new FormControl('', Validators.required),
   })
+
   
-  onSubmit(e: Event){
+  async onSubmit(e: Event){
     if(this.contactForm.valid){
-
-      let SERVICE_ID = 'service_emn2qqh'
-      let TEMPLATE_ID = 'template_44uahm8'
-      let PUBLIC_KEY = 'ngidyGCIxo9hsWK7I'
-      
       this.contactService.setIsLoading(true)
+      
+      let data = await fetch("https://web-portfolio-server-i3dz.onrender.com/").then((response)=>{return response.json()});
 
-      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target as HTMLFormElement, {
-        publicKey: PUBLIC_KEY,
+      emailjs.sendForm(data.serviceID, data.publicID, e.target as HTMLFormElement, {
+        publicKey: data.publicKey,
       })
       .then(
         () => {

@@ -1,3 +1,21 @@
+@property --opacity{
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
+}
+
+.body-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--neutral-color);
+    background-image:  linear-gradient(rgb(80, 210, 46, var(--opacity)) 3.2px, transparent 3.2px), linear-gradient(to right, rgb(80, 210, 46, var(--opacity)) 3.2px, #080808 3.2px);
+        background-size: 64px 64px;
+}
+
+.user-entered{
+    animation: reveal-background 2s ease-in-out 1 normal forwards;
+}
+
 .main{
     border: var(--border-size) solid var(--primary-color);
     width: 85vw;
@@ -20,4 +38,10 @@
     scrollbar-width: thin;
     padding: 1em 2em;
     position: relative;
+}
+
+@keyframes reveal-background {
+    to{
+        --opacity: 5%;
+    }
 }

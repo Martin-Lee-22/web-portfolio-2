@@ -1,15 +1,17 @@
-<main class="main">
-  @if(!isIntroActive){
-    <app-intro [(isIntroActive)]="isIntroActive"/>
-  } @else {
-    <app-mute/>
-    <sidebar [(pageIndex)]="pageIndex"/>
-    <section class="features-container">
-      @if(pageIndex === 0){<app-home/>}
-      @if(pageIndex === 1){<app-projects/>}
-      @if(pageIndex === 2){<app-about/>}
-      @if(pageIndex === 3){<app-contact/>}
-    </section>
-    <app-modal/>
-  }
-</main>
+<div [class]="'body-container' + ' ' +(isIntroActive ? ' user-entered' : '')">
+  <main class="main">
+    @if(!isIntroActive){
+      <app-intro [(isIntroActive)]="isIntroActive"/>
+    } @else {
+      <app-mute/>
+      <sidebar [(pageIndex)]="pageIndex"/>
+      <section class="features-container">
+        @if(pageIndex === 0){<app-home/>}
+        @if(pageIndex === 1){<app-projects/>}
+        @if(pageIndex === 2){<app-about/>}
+        @if(pageIndex === 3){<app-contact/>}
+      </section>
+      <app-modal/>
+    }
+  </main>
+</div>

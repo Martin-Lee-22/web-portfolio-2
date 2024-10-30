@@ -1,12 +1,12 @@
 <form class="contact-form" [formGroup]="contactForm" (submit)="onSubmit($event)">
     <div class="input-wrapper">
         <label for="name">Name</label>
-        <input type="text" name="name" id="name" formControlName="name" required>
+        <input type="text" name="user_name" id="name" formControlName="name" required>
         @if(isValid('name')){<span class="input-error">This field is required.</span>}
     </div>
     <div class="input-wrapper">
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" formControlName="email" required>
+        <input type="email" name="user_email" id="email" formControlName="email" required>
         @if(isValid('email')){<span class="input-error">This field is required. Proper email format is required</span>}
     </div>
     <div class="input-wrapper">
@@ -14,5 +14,5 @@
         <textarea name="message" id="message" formControlName="message" required></textarea>
         @if(isValid('message')){<span class="input-error">This field is required.</span>}
     </div>
-    <input type="submit" value="Send">
+    <input type="submit" appClick value="Send">
 </form>
