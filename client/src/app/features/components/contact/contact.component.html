@@ -7,7 +7,7 @@
     </div>
     <div class="form-container grow">
         @if(contactService.getIsSubmitted()){<app-response/>}
-        @if(contactService.getIsLoading()){<app-loading/>}
+        @if(!contactService.getIsLoading()){<app-loading/>}
         <app-form/>
     </div>
 </article>
