@@ -9,7 +9,7 @@
     height: 100vh;
     background-color: var(--neutral-color);
     background-image:  linear-gradient(rgb(80, 210, 46, var(--opacity)) 3.2px, transparent 3.2px), linear-gradient(to right, rgb(80, 210, 46, var(--opacity)) 3.2px, #080808 3.2px);
-        background-size: 64px 64px;
+    background-size: 64px 64px;
 }
 
 .user-entered{
@@ -32,7 +32,6 @@
 
 .features-container{
     width: 100%;
-    overflow-y: scroll;
     overflow-x: hidden;
     scrollbar-color: var(--primary-color) var(--neutral-color);
     scrollbar-width: thin;

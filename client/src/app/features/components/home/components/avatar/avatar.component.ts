@@ -5,7 +5,7 @@ import { Component, ViewChild, ElementRef, AfterViewInit, HostListener } from '@
   standalone: true,
   imports: [],
   templateUrl: './avatar.component.html',
-  styleUrl: './avatar.component.css'
+  styleUrls: ['./avatar.component.css', '../../../../../animations.css']
 })
 export class AvatarComponent implements AfterViewInit{
   @ViewChild('avatarContainer') avatarContainer!: ElementRef<HTMLDivElement>;
@@ -57,6 +57,7 @@ export class AvatarComponent implements AfterViewInit{
         break
 
       case 3:
+        this.avatarContainer.nativeElement.classList.remove('grow')
         this.avatarContainer.nativeElement.classList.add('lower-head', 'easter-egg')
         break
       default:

@@ -37,6 +37,7 @@
         flex-wrap: wrap;
         & h1, h2{
             max-width: 286px;
+            text-align: center;
         }
         & h1{
             font-size: calc(var(--font-size) * 2.25);
