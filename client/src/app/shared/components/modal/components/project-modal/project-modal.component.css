@@ -75,16 +75,8 @@
         }
     }
     & a{
-        &:visited{
-            text-decoration: none;
-            color: var(--quaternary-color);
-        }
-        &:link{
-            text-decoration: none;
-        }
-        &:focus{
-            outline: none;
-        }
+        color: var(--quaternary-color);
+        text-decoration: none;
         &:hover{
             text-decoration: underline;
         }
@@ -125,8 +117,7 @@
 
     .info-container{
         flex-direction: column;
-        height: 100%;
-        overflow-y: scroll;
+        height:50%;
     }
     .description-container{
         height: min-content;

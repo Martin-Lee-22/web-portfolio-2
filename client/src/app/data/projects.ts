@@ -29,7 +29,9 @@ export const projects = [
         "tools":['angular', 'typescript', 'javascript'],
         "link": "https://martins-web-portfolio.onrender.com",
         "github": "https://github.com/Martin-Lee-22/web-portfolio-2",
-        "inProgress": false
+        "inProgress": false,
+        "framework": 'angular',
+        "highlight": true
     },
     {
         "title": "easycolorui",
@@ -49,7 +51,9 @@ export const projects = [
         "tools":['react', 'nodejs', 'typescript', 'prisma', 'nestjs', 'framer', 'javascript', 'sass', 'vite', 'neon'],
         "link": "https://easycolorui.onrender.com/",
         "github": "https://github.com/Martin-Lee-22/easycolorui",
-        "inProgress": false
+        "inProgress": false,
+        "framework": 'react',
+        "highlight": false
     },
     {
         "title": "Medical Clinic",
@@ -97,7 +101,9 @@ export const projects = [
         "tools":['react', 'nodejs', 'typescript', 'mongodb', 'express', 'javascript', 'date-fns', 'css'],
         "link": "https://medical-clinic-frontend.onrender.com/",
         "github": "https://github.com/Martin-Lee-22/Medical-Clinic/tree/main",
-        "inProgress": false
+        "inProgress": false,
+        "framework": 'react',
+        "highlight": false
     },
     {
         "title": "Web Portfolio v1.0",
@@ -125,6 +131,8 @@ export const projects = [
         "tools":['react', 'javascript', 'css'],
         "link": "https://web-portfolio-3j2o.onrender.com/",
         "github": "https://github.com/Martin-Lee-22/Web-Portfolio",
-        "inProgress": false
+        "inProgress": false,
+        "framework": 'react',
+        "highlight": false
     }
 ]

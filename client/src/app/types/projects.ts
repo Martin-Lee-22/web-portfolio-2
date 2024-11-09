@@ -12,5 +12,7 @@ export type Project = {
     tools:string[],
     link: string,
     github: string,
-    inProgress: boolean
+    inProgress: boolean,
+    highlight: boolean,
+    framework: string
 }

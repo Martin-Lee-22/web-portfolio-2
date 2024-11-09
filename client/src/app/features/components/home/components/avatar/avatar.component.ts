@@ -48,7 +48,7 @@ export class AvatarComponent implements AfterViewInit{
     switch(this.count){
       case 1:
         this.eyelidElements.forEach((element) => {
-          element.classList.add('blink')
+          element.classList.add('avatar-blink')
         })
         break
 
