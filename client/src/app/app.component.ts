@@ -16,6 +16,6 @@ import { ContactComponent } from "./features/components/contact/contact.componen
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  isIntroActive: boolean = true
+  isIntroActive: boolean = false
   pageIndex: number = 0
 }
