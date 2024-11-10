@@ -53,8 +53,6 @@
 .description-container{
     width: 65%;
     padding: 1em 1em 0 1em;
-    height: 100%;
-    border-right: 1px dashed var(--primary-color);
     & p{
         margin-top: 1em;
         font-size: calc(var(--font-size) * 0.575);

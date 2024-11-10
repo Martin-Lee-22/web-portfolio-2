@@ -27,8 +27,13 @@
     }
 }
 
+.heading-container{
+    margin-top: 25px;
+}
+
 .img-container{
     position: relative;
+    margin-bottom: 50px;
 }
 
 
