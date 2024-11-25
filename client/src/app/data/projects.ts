@@ -56,56 +56,6 @@ export const projects = [
         "highlight": false
     },
     {
-        "title": "Medical Clinic",
-        "date": "2024",
-        "role": "Lead Developer",
-        "description": "A personal 'MERN' web application designed for medical office assistants to streamline administrative tasks. It allows users to create and manage profiles for patients, doctors, and clinic facilities. This application enables office staff to schedule and track patient appointments to minimize scheduling conflicts. Feel free to to create an account to try it out!",
-        "images": [
-                    {
-                        "src" :"/images/projects/project_2/1.png", 
-                        "alt": "Login Page"
-                    }, 
-                    {
-                        "src": "/images/projects/project_2/2.png", 
-                        "alt": "Appointment light section"
-                    },
-                    {
-                        "src": "/images/projects/project_2/3.png", 
-                        "alt": "Appointment dark section"
-                    },
-                    {
-                        "src": "/images/projects/project_2/4.png", 
-                        "alt": "Patient Light Section"
-                    },
-                    {
-                        "src" :"/images/projects/project_2/5.png", 
-                        "alt": "Patient Dark Section"
-                    }, 
-                    {
-                        "src": "/images/projects/project_2/6.png", 
-                        "alt": "Doctor Light section"
-                    },
-                    {
-                        "src": "/images/projects/project_2/7.png", 
-                        "alt": "Doctor Dark section"
-                    },
-                    {
-                        "src": "/images/projects/project_2/8.png", 
-                        "alt": "Clinic Light section"
-                    },
-                    {
-                        "src": "/images/projects/project_2/9.png", 
-                        "alt": "Clinic Dark section"
-                    }
-                ],
-        "tools":['react', 'nodejs', 'typescript', 'mongodb', 'express', 'javascript', 'date-fns', 'css'],
-        "link": "https://medical-clinic-frontend.onrender.com/",
-        "github": "https://github.com/Martin-Lee-22/Medical-Clinic/tree/main",
-        "inProgress": false,
-        "framework": 'react',
-        "highlight": false
-    },
-    {
         "title": "Web Portfolio v1.0",
         "date": "2022",
         "role": "Lead Developer",
