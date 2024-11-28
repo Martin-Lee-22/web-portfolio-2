@@ -5,7 +5,7 @@
         <hr/>
         <ul>
         @for(link of links; track $index){
-            <li [hoverSound]="hoverSound" (click)="updatePageIndex($index)" [class]="(screenWidth > 701 ? 'text-cursor' : '')+ ' ' + ($index === pageIndex ? 'li-active' : '')">
+            <li (click)="updatePageIndex($index)" [class]="(screenWidth > 701 ? 'text-cursor' : '')+ ' ' + ($index === pageIndex ? 'li-active' : '')">
                 <a>{{link | titlecase}}</a>
             </li>
         }

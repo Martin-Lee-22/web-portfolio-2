@@ -3,7 +3,7 @@ import { CardComponent } from '../../../shared/components/card/card.component';
 import {projects} from '../../../data/projects';
 import { ModalService } from '../../../shared/components/modal/modal.service';
 import { modals } from '../../../data/enums';
-import { pageTransition, upwardsRevealStagger } from '../../../animations';
+import { pageTransition } from '../../../animations';
 
 @Component({
   selector: 'app-projects',
